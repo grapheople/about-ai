@@ -34,3 +34,20 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# lecture exports
+*.pptx
+*.pdf
+!raw/**/*.pdf
+
+# obsidian workspace state
+.obsidian/workspace*.json
+.obsidian/plugins/
+
+# claudian (sessions, local settings)
+.claudian/
+
+# raw 원문 사본 (저작권: 로컬에만 보관, 요약은 wiki/sources/)
+raw/2026-10-20-karpathy-llm-wiki.md
+raw/2026-10-21-claude-code-setup-docs.md
+raw/2026-10-21-claude-code-terminal-guide.md
