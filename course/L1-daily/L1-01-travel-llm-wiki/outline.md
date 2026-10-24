@@ -7,7 +7,7 @@ target_minutes: 25
 prerequisites: []
 slides_url: https://docs.google.com/presentation/d/16AwFGQAskmSVo7FGHU7qZ8dGmdktxJYkSKo65byPoqk/edit
 slides_synced:    # YYYY-MM-DD (script <커밋>) — 슬라이드가 반영한 대본 버전
-notes_synced: 2026-10-25 (script uncommitted — S01 강사 수정본)
+notes_synced: 2026-10-25 (script 060e305)
 updated: 2026-10-25
 ---
 
