@@ -6,6 +6,8 @@ status: outline   # idea | outline | script | slides | final | recorded | publis
 target_minutes: 15
 prerequisites: []
 slides_url: 
+slides_synced:    # YYYY-MM-DD (script <커밋>) — 슬라이드가 반영한 대본 버전
+notes_synced:     # YYYY-MM-DD (script <커밋>) — 발표자 노트가 반영한 대본 버전
 updated: YYYY-MM-DD
 ---
 

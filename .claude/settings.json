@@ -1,0 +1,16 @@
+{
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Edit|Write",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "f=$(jq -r \".tool_input.file_path // .tool_response.filePath // empty\"); case \"$f\" in */course/*/script.md) echo \"{\\\"hookSpecificOutput\\\":{\\\"hookEventName\\\":\\\"PostToolUse\\\",\\\"additionalContext\\\":\\\"script.md가 바뀌었다: $f. 이 레슨 outline.md에 slides_url이 있으면, 이번 작업을 마친 뒤 sync-speaker-notes 스킬로 발표자 노트 동기화를 제안한다. 슬라이드에 쓰기 전에는 반드시 사용자 컨펌을 받는다.\\\"}}\";; esac",
+            "timeout": 10
+          }
+        ]
+      }
+    ]
+  }
+}

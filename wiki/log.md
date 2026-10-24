@@ -59,3 +59,27 @@ Append-only 작업 기록. 형식: `## [YYYY-MM-DD] <ingest|query|lint|outline|s
 - outline 기획 의도·학습 목표, script S08 표지, curriculum, overview 갱신. 레슨 ID·폴더명 유지
 
 ## [2026-10-25] setup | 옛 슬라이드 파이프라인 파일 삭제 — L1-01 slides.md, templates/slides.md, tools/gslides/
+
+## [2026-10-25] setup | 슬라이드 텍스트 수정을 Claude가 담당(항상 사용자 컨펌), 싱크 확인 절차와 outline `slides_synced` 추가
+
+## [2026-10-25] setup | sync-speaker-notes 스킬 추가 — script.md [S] 블록 → 같은 번호 슬라이드 발표자 노트 (컨펌 후 쓰기)
+- .claude/skills/sync-speaker-notes (SKILL.md + scripts/notes_sync.py), .claude/settings.json PostToolUse 훅, CLAUDE.md 5절, outline `notes_synced`
+
+## [2026-10-25] slides | L1-01 발표자 노트 동기화 (S01–S28 전체, 빈 슬라이드 S09·S25–S28은 위치로 매칭)
+- 덱 노트가 전부 비어 있어 28장 모두 채움. script 85b361a 기준
+
+## [2026-10-25] ingest | S01 사실 확인 — 무한도전(2015) 빅데이터 활용, LLM 다음 토큰 예측
+- raw 추가: bigdata-llm-facts / 신규: sources/bigdata-llm-facts / 갱신: index
+
+## [2026-10-25] script | L1-01 S01 강사 수정본 반영 — 띄어쓰기·맞춤법 12곳 수정, 내레이션 약 5,670자·26분
+
+## [2026-10-25] slides | L1-01 S01 본문 "개발 총괄" → "개발 담당", S01 발표자 노트 동기화 (강사 컨펌)
+
+## [2026-10-25] ingest | S01 사실 확인 — 무한도전(2015) 빅데이터 활용, LLM 다음 토큰 예측
+- raw 추가: bigdata-llm-facts / 신규: sources/bigdata-llm-facts / 갱신: index
+
+## [2026-10-25] script | L1-01 S01 강사 수정본 반영 — 띄어쓰기·맞춤법 12곳 수정, 내레이션 약 5,670자·26분
+
+## [2026-10-25] slides | L1-01 S01 본문 "개발 총괄" → "개발 담당", S01 발표자 노트 동기화 (강사 컨펌)
+
+## [2026-10-25] slides | L1-01 S02 발표자 노트 동기화 (강사가 "GPT-3를 개량한 모델로" → "GPT-3로" 수정)

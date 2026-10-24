@@ -1,6 +1,6 @@
 ---
 type: index
-updated: 2026-10-23
+updated: 2026-10-25
 ---
 
 # Wiki Index
@@ -21,6 +21,7 @@ updated: 2026-10-23
 - [[sources/instructor-interview-ai-dev-reality]] — 강사 인터뷰: 5명이 20명 몫, AI가 쓴 바이블 기획서 (L1, L3, L5)
 - [[sources/instructor-career-story]] — 강사 인터뷰: 12년차 서버 개발자의 AI 코딩 체험 변천사 (L1, L3)
 - [[sources/ai-coding-timeline-facts]] — Copilot·GPT-4·Claude Code 출시 시점, ○○ 엔지니어링 용어, Karpathy Anthropic 합류 (L1, L3, L4)
+- [[sources/bigdata-llm-facts]] — 무한도전(2015) 빅데이터 활용, LLM은 다음 토큰 예측기 (L1, L4)
 - [[sources/graph-eval-engineering]] — 그래프 엔지니어링(멀티 에이전트 조율)·이밸 엔지니어링(자동 평가) 정의 (L1, L4, L5)
 
 ## Concepts
