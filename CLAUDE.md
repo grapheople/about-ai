@@ -146,7 +146,7 @@ outline → script → slides(사용자, Gemini) → final(리허설) → 촬영
    가볍게 유지한다 (구조와 출처 확인이 목적). 근거가 부족하면 "필요한 소스" 목록을 사용자에게 먼저 제시한다.
 2. **script** — outline을 따라 대본 작성. 화면 전환 지점에 `[S]` 헤더를 넣는다.
    예상 러닝타임(`est_minutes`)과 글자 수(`chars`)를 frontmatter에 기록.
-3. **slides** — 사용자가 Gemini로 슬라이드를 만든다 (5절 참고). 완성된 덱 링크를 outline.md의 `slides_url`에 기록.
+3. **slides** — 사용자가 Gemini로 슬라이드를 만들어 Google Drive에 둔다 (5절 참고). 덱 링크를 outline.md의 `slides_url`에 기록.
 4. **final** — 촬영 직전 대본 최종 수정. 완성된 슬라이드를 넘기며 소리 내어 읽는다는 가정으로
    어색한 문장, 화면과 안 맞는 설명, 길이 초과를 고친다. 바뀐 내용이 슬라이드에 영향을 주면 바뀐 `[S]` 번호를 사용자에게 알려 준다.
 5. **촬영** — 사용자가 진행. 끝나면 상태를 `recorded`로.
@@ -155,9 +155,14 @@ outline → script → slides(사용자, Gemini) → final(리허설) → 촬영
 
 ---
 
-## 5. 슬라이드 (Gemini)
+## 5. 슬라이드 (Gemini + Google Drive)
 
 - 사용자가 `script.md`를 Gemini에 넣어 슬라이드를 만든다. Claude는 슬라이드 제작·갱신을 하지 않는다.
+- 덱은 Google Drive에서 관리한다. git에는 링크만 남긴다 (outline.md의 `slides_url`).
+  - 강의 덱 폴더: [강의자료](https://drive.google.com/drive/folders/1rBHCYJ6bFuK7kWjr1mS9dHfqwv5RTI9U) (folder id `1rBHCYJ6bFuK7kWjr1mS9dHfqwv5RTI9U`)
+  - 덱 파일명: `[L1-01] <레슨 제목>`
+- Claude는 Google Drive 커넥터로 덱을 **읽기만** 한다 (final 단계에서 대본과 슬라이드가 맞는지 확인할 때).
+  덱을 만들거나 고치거나 옮기지 않는다.
 - 슬라이드가 만들어진 뒤 Claude가 대본을 고치면, 영향을 받는 `[S]` 번호와 바뀐 내용을 답변 끝에 목록으로 알려 준다.
   블록 추가·삭제·순서 변경으로 번호가 바뀌면 그 사실도 알린다.
 - 사용자가 슬라이드에서 내용을 바꿨다고 알려 주면 `script.md`에 먼저 반영한다.

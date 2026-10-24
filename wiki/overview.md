@@ -6,7 +6,7 @@ updated: 2026-10-22
 # Overview
 
 이 위키는 "일상 AI 활용 → 엔터프라이즈 AI 플랫폼" 강의의 사실 저장소다.
-첫 ingest(2026-10-21)는 L1-01 "기억하는 여행 계획" 레슨을 위한 자료로, 개념 하나(LLM 위키)와 도구 셋(Obsidian·Claude Code·Claudian)이 중심이다.
+첫 ingest(2026-10-21)는 L1-01 "LLM 위키로 쌓는 나만의 지식" 레슨을 위한 자료로, 개념 하나(LLM 위키)와 도구 셋(Obsidian·Claude Code·Claudian)이 중심이다.
 
 ## 레벨별 지식 지도
 - **L1 일상**: [[concepts/llm-wiki]]를 [[practices/travel-llm-wiki]]로 체험. 도구 [[tools/obsidian]] + [[tools/claudian]] + [[tools/claude-code]].

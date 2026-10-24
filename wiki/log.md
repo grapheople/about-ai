@@ -50,3 +50,12 @@ Append-only 작업 기록. 형식: `## [YYYY-MM-DD] <ingest|query|lint|outline|s
 
 ## [2026-10-23] setup | 슬라이드 제작을 사용자(Gemini)로 변경 — slides.md·Google Slides 커넥터 단계 제거
 - CLAUDE.md 1·3·4·5·6·7절 갱신, outline `gslides_url` → `slides_url`. Claude는 대본 수정 시 영향받는 [S] 번호를 알린다.
+
+## [2026-10-25] setup | 슬라이드 덱을 Google Drive에서 관리 — CLAUDE.md 5절에 폴더·파일명 규칙, Claude는 Drive 커넥터로 읽기만
+
+## [2026-10-25] setup | 강의 덱 Drive 폴더(강의자료) 등록, L1-01 덱 링크를 outline slides_url에 기록
+
+## [2026-10-25] outline | L1-01 제목 변경 — "AI 시대에도 변하지 않는 것 — LLM 위키로 쌓는 나만의 지식" (여행은 예시로)
+- outline 기획 의도·학습 목표, script S08 표지, curriculum, overview 갱신. 레슨 ID·폴더명 유지
+
+## [2026-10-25] setup | 옛 슬라이드 파이프라인 파일 삭제 — L1-01 slides.md, templates/slides.md, tools/gslides/

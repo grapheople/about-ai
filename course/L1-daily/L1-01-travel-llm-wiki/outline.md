@@ -1,22 +1,23 @@
 ---
 lesson: L1-01
-title: Claude와 Obsidian으로 "기억하는 여행 계획" 만들기 — LLM 위키 입문
+title: AI 시대에도 변하지 않는 것 — LLM 위키로 쌓는 나만의 지식
 level: L1
 status: script   # idea | outline | script | slides | final | recorded | published
 target_minutes: 25
 prerequisites: []
-slides_url: 
-updated: 2026-10-22
+slides_url: https://docs.google.com/presentation/d/16AwFGQAskmSVo7FGHU7qZ8dGmdktxJYkSKo65byPoqk/edit
+updated: 2026-10-25
 ---
 
-# L1-01 Claude와 Obsidian으로 "기억하는 여행 계획" 만들기
+# L1-01 AI 시대에도 변하지 않는 것 — LLM 위키로 쌓는 나만의 지식
 
 ## 이 영상을 보면
 터미널을 처음 여는 사람도 Obsidian + Claudian으로 Claude와 대화하며,
-**대화가 사라지지 않고 쌓이는 나만의 여행 위키**를 만들어 실제 여행 계획을 짤 수 있다.
+**대화가 사라지지 않고 쌓이는 나만의 지식 베이스(LLM 위키)**를 만들 수 있다. 여행 계획은 이를 체험하는 예시다.
 
 ## 왜 이 영상인가 (기획 의도)
 - 채널의 첫 영상. "일상 AI 활용" 레벨이지만, 단순 채팅을 넘어 **지식이 쌓이는 사용법**을 첫인상으로 보여 준다.
+- **핵심은 여행 계획이 아니라 "지식 베이스를 LLM 위키로 만든다"는 것** (2026-10-25 강사 결정). 도구와 방법론은 몇 달마다 바뀌어도 내가 쌓은 지식은 남는다 → 제목도 이 메시지로.
 - 근거는 강사 본인의 실제 경험: 2026-06 도쿄 가족여행을 LLM 위키(pathfinder 저장소)로 준비하고,
   현지에서 날이 좋아 실내 일정(teamLab Planets)을 수상버스(크루즈)로 바꿨을 때 위키 전체가 함께 갱신된 경험.
 - **성공 기준: 반응.** 어떤 반응이든 소중하고, **무반응이 실패**다.
@@ -29,7 +30,7 @@ updated: 2026-10-22
 ## 학습 목표 (3개 이내)
 1. LLM 위키가 일반 채팅과 무엇이 다른지 한 문장으로 설명할 수 있다. ("대화는 사라지지만, 위키는 쌓인다")
 2. Mac에서 Obsidian · Claude Code · Claudian을 설치하고 로그인까지 마칠 수 있다.
-3. Karpathy의 LLM 위키 글을 Claude에게 건네 **나만의 여행 위키 규칙(CLAUDE.md)을 함께 만들고**, 여행 계획을 짜고 고칠 수 있다.
+3. Karpathy의 LLM 위키 글을 Claude에게 건네 **나만의 위키 규칙(CLAUDE.md)을 함께 만들고**, 자료를 넣어 지식을 쌓고 고칠 수 있다 (예시: 여행 계획).
 
 ## 확정된 결정 (인터뷰에서 사용자가 정한 것)
 - 도구: **Obsidian + Claudian 플러그인** (내부적으로 Claude Code 사용).
