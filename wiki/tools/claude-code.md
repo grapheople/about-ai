@@ -4,8 +4,8 @@ title: Claude Code
 aliases: [claude]
 levels: [L1, L3, L4]
 volatility: high
-updated: 2026-10-21
-sources: [sources/claude-code-setup-docs, sources/claude-code-terminal-guide, sources/claude-pricing]
+updated: 2026-10-22
+sources: [sources/claude-code-setup-docs, sources/claude-code-terminal-guide, sources/claude-pricing, sources/ai-coding-timeline-facts]
 tags: [anthropic, agent]
 ---
 
@@ -15,6 +15,12 @@ Anthropic의 에이전트형 AI 도구. 내 컴퓨터의 폴더에서 파일을 
 코딩용으로 알려졌지만 "원하는 것을 말로 설명하면 된다" — 비개발자도 쓸 수 있다.
 
 ## 본문
+
+### 출시와 생태계
+- 2025-02-24 Claude 3.7 Sonnet과 함께 리서치 프리뷰로 공개됐다.
+- 플러그인: 스킬·에이전트·훅·MCP 서버를 한 묶음으로 설치하는 단위. `/plugin`으로 마켓플레이스에서 설치 (as of 2026-10).
+- 스킬: Claude가 필요할 때 불러 쓰는 `SKILL.md` 지침. 명령으로도 실행 가능 (as of 2026-10).
+- 이 장치들이 [[concepts/ai-engineering-paradigms]]의 "하네스"에 해당한다.
 
 ### 설치 (macOS, as of 2026-10)
 1. `Cmd + Space` → "Terminal" → `Enter`
@@ -36,7 +42,7 @@ Anthropic의 에이전트형 AI 도구. 내 컴퓨터의 폴더에서 파일을 
 클릭 대신 화살표 키, `Esc` 중단, `exit` 종료, `/help` 명령 목록.
 
 ## 관련
-- [[tools/claudian]] · [[tools/obsidian]] · [[concepts/llm-wiki]]
+- [[tools/claudian]] · [[tools/obsidian]] · [[concepts/llm-wiki]] · [[concepts/ai-engineering-paradigms]] · [[syntheses/ai-coding-timeline]]
 
 ## 출처
-- [[sources/claude-code-setup-docs]] · [[sources/claude-code-terminal-guide]] · [[sources/claude-pricing]]
+- [[sources/claude-code-setup-docs]] · [[sources/claude-code-terminal-guide]] · [[sources/claude-pricing]] · [[sources/ai-coding-timeline-facts]]

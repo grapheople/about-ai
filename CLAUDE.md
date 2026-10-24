@@ -45,12 +45,11 @@ course/
   L1-daily/                     레벨별 폴더
     L1-01-<slug>/
       outline.md                학습목표, 흐름, 근거 위키 링크
-      script.md                 촬영용 대본 — 내용의 원본, [S] 블록 = 슬라이드 1장
-      slides.md                 대본에서 만든 슬라이드 (Marp 마크다운 → Google Slides 생성)
+      script.md                 촬영용 대본 — 내용의 원본, [S] 블록 = 슬라이드 1장 (사용자가 Gemini로 슬라이드 제작)
       youtube.md                제목·설명·챕터·태그·썸네일 문구
       assets/                   이 레슨 전용 이미지·다이어그램
 
-templates/                      source.md, wiki-page.md, outline.md, script.md, slides.md, youtube.md
+templates/                      source.md, wiki-page.md, outline.md, script.md, youtube.md
 ```
 
 ---
@@ -94,10 +93,8 @@ AI는 몇 달 단위로 바뀐다. 오래된 정보가 영상에 박히는 것�
 - `levels:` frontmatter에 이 지식이 쓰이는 강의 레벨을 적는다 (예: `[L2, L4]`).
 
 ### 원본 우선순위 — 대본이 먼저다
-**`script.md` → `slides.md` → Google Slides** 순서로 만들어진다. 앞의 것이 원본이다.
+**`script.md` → 슬라이드(사용자가 Gemini로 제작)** 순서로 만들어진다. 앞의 것이 원본이다.
 - 내용(무슨 말을 하는가)의 원본은 `script.md`. 슬라이드는 대본을 시각적으로 요약한 것이다.
-- 슬라이드 구성의 원본은 `slides.md`. Google Slides는 여기서 생성되는 결과물이며,
-  Google Slides에서는 디자인(배치·이미지·색)만 손댄다.
 - 슬라이드 작업 중 대본을 바꿔야 할 곳이 보이면 `script.md`를 먼저 고친 뒤 슬라이드에 반영한다.
 
 ### 대본 (`script.md`)
@@ -108,20 +105,17 @@ AI는 몇 달 단위로 바뀐다. 오래된 정보가 영상에 박히는 것�
 - 첫 30초에 "이 영상을 보면 ○○를 할 수 있다"는 훅을 넣는다.
 - 한 `[S]` 블록이 1분(300자)을 넘으면 슬라이드를 나눌지 검토한다.
 
-### 슬라이드 (`slides.md`, Marp)
-- `script.md`의 `[S]` 블록과 순서·개수를 1:1로 맞춘다. 대본에 없는 내용을 슬라이드에 새로 넣지 않는다.
-- 슬라이드 1장 = 메시지 1개. 제목은 문장형 결론 ("RAG는 매번 처음부터 찾는다"). 보통 `[S]` 헤더의 핵심 메시지를 쓴다.
-- 본문 텍스트는 6줄 이하, 한 줄 20자 내외. 대본을 그대로 옮기지 말고 키워드·도식으로 요약한다.
-- 다이어그램은 Mermaid 또는 `assets/`의 이미지. 대본의 `[데모: ...]`는 `<!-- DEMO: ... -->`로 옮긴다.
-- 각 슬라이드 끝에 `<!-- notes: 요점 1~2줄 -->` (Google Slides 발표자 노트로 들어감).
-- 16:9, 표지 → 오늘 배울 것 → 본문 → 요약 → 다음 영상 예고 구조.
+### 슬라이드 (사용자가 Gemini로 제작)
+- 슬라이드는 사용자가 `script.md`를 Gemini에 넣어 직접 만든다. Claude는 슬라이드 파일을 만들지 않는다.
+- 그래서 대본의 `[S]` 헤더가 곧 슬라이드 설계다: 블록 1개 = 슬라이드 1장, 헤더 = 문장형 결론 제목 ("RAG는 매번 처음부터 찾는다").
+- 슬라이드에도 대본에 없는 내용을 새로 넣지 않는다.
 
 ---
 
 ## 4. 워크플로
 
 모든 작업이 끝나면 `wiki/log.md`에 한 줄 블록을 추가한다:
-`## [YYYY-MM-DD] <작업종류> | <대상>` (작업종류: ingest, query, lint, outline, script, slides, gslides, final, publish)
+`## [YYYY-MM-DD] <작업종류> | <대상>` (작업종류: ingest, query, lint, outline, script, slides, final, publish)
 
 ### Ingest — 새 소스 처리
 1. `raw/`의 소스를 읽는다 (이미지는 텍스트를 먼저 읽고 별도로 본다).
@@ -145,46 +139,33 @@ AI는 몇 달 단위로 바뀐다. 오래된 정보가 영상에 박히는 것�
 각 단계 끝에 사용자 리뷰를 받는다. 승인 전에 다음 단계로 넘어가지 않는다.
 
 ```
-outline → script → slides → gslides → final(리허설) → 촬영(사용자) → youtube
+outline → script → slides(사용자, Gemini) → final(리허설) → 촬영(사용자) → youtube
 ```
 
 1. **outline** — `templates/outline.md` 복사. 학습목표 3개 이내, 섹션 흐름, 각 섹션의 근거 wiki 링크.
    가볍게 유지한다 (구조와 출처 확인이 목적). 근거가 부족하면 "필요한 소스" 목록을 사용자에게 먼저 제시한다.
 2. **script** — outline을 따라 대본 작성. 화면 전환 지점에 `[S]` 헤더를 넣는다.
    예상 러닝타임(`est_minutes`)과 글자 수(`chars`)를 frontmatter에 기록.
-3. **slides** — 대본의 `[S]` 블록마다 슬라이드 1장씩 `slides.md` 작성.
-   작성 중 대본에서 고칠 곳이 보이면 목록으로 정리해 사용자에게 제안한다.
-4. **gslides** — Google Slides 커넥터로 덱 생성·갱신 (5절 참고). 생성된 URL을 outline.md의 `gslides_url`에 기록.
-5. **final** — 촬영 직전 대본 최종 수정. 완성된 슬라이드를 넘기며 소리 내어 읽는다는 가정으로
-   어색한 문장, 화면과 안 맞는 설명, 길이 초과를 고친다. 바뀐 내용이 슬라이드에 영향을 주면 3~4단계를 다시 반영한다.
-6. **촬영** — 사용자가 진행. 끝나면 상태를 `recorded`로.
-7. **youtube** — 제목 후보 3개, 설명, 챕터 타임스탬프(대본 `[S]` 블록 기준 추정), 태그, 썸네일 문구.
-8. `course/curriculum.md` 상태 갱신: `idea → outline → script → slides → final → recorded → published`.
+3. **slides** — 사용자가 Gemini로 슬라이드를 만든다 (5절 참고). 완성된 덱 링크를 outline.md의 `slides_url`에 기록.
+4. **final** — 촬영 직전 대본 최종 수정. 완성된 슬라이드를 넘기며 소리 내어 읽는다는 가정으로
+   어색한 문장, 화면과 안 맞는 설명, 길이 초과를 고친다. 바뀐 내용이 슬라이드에 영향을 주면 바뀐 `[S]` 번호를 사용자에게 알려 준다.
+5. **촬영** — 사용자가 진행. 끝나면 상태를 `recorded`로.
+6. **youtube** — 제목 후보 3개, 설명, 챕터 타임스탬프(대본 `[S]` 블록 기준 추정), 태그, 썸네일 문구.
+7. `course/curriculum.md` 상태 갱신: `idea → outline → script → slides → final → recorded → published`.
 
 ---
 
-## 5. Google Slides 연동
+## 5. 슬라이드 (Gemini)
 
-- 연동 수단: Google Slides 커넥터(MCP). 커넥터를 처음 호출하기 전에 `google-workspace` 스킬을 먼저 읽는다.
-  인증이 안 되어 있으면 사용자에게 인증을 요청한다.
-- **템플릿 덱**: 강의용 디자인 템플릿 덱 하나를 Google Drive에 둔다. 새 레슨은 이 덱을 복사해서 만든다.
-  - 템플릿 덱 URL: `TODO — 템플릿 덱을 만들면 여기에 기록`
-  - 덱 파일명: `[L1-01] <레슨 제목>`
-  - 드라이브 폴더: `TODO — 강의 덱 폴더 URL`
-- 생성·갱신 규칙
-  - `slides.md`의 `---` 구분 1개 = Google Slides 1장. 순서와 개수를 그대로 맞춘다 (대본 `[S03]` 번호 유지).
-  - `<!-- notes: -->`는 발표자 노트로, `<!-- DEMO: -->`는 발표자 노트 맨 앞에 `[DEMO]`로 넣는다.
-  - Mermaid 다이어그램은 이미지로 렌더링해 `assets/`에 저장한 뒤 삽입한다.
-  - 다시 생성할 때는 덱에서 사용자가 디자인을 손본 부분을 덮어쓰지 않도록, 바뀐 슬라이드의 텍스트만 갱신한다.
-    구조 변경(슬라이드 추가·삭제·순서 변경)은 사용자에게 먼저 확인한다.
-  - 촬영용 PDF가 필요하면 Google Slides에서 내려받는다.
+- 사용자가 `script.md`를 Gemini에 넣어 슬라이드를 만든다. Claude는 슬라이드 제작·갱신을 하지 않는다.
+- 슬라이드가 만들어진 뒤 Claude가 대본을 고치면, 영향을 받는 `[S]` 번호와 바뀐 내용을 답변 끝에 목록으로 알려 준다.
+  블록 추가·삭제·순서 변경으로 번호가 바뀌면 그 사실도 알린다.
+- 사용자가 슬라이드에서 내용을 바꿨다고 알려 주면 `script.md`에 먼저 반영한다.
+- 촬영용 PDF가 필요하면 사용자가 내려받는다.
 
 ## 6. 명령어
 
 ```bash
-# slides.md 로컬 미리보기 (작성 중 확인용, 브라우저 실시간 반영)
-npx @marp-team/marp-cli@latest -s course/
-
 # 최근 작업 기록 5개
 grep "^## \[" wiki/log.md | tail -5
 
@@ -202,5 +183,5 @@ grep -rh "^status:" course/*/*/outline.md | sort | uniq -c
 - index.md·log.md 갱신 누락.
 - 사용자 승인 없이 레슨 파이프라인 단계 건너뛰기.
 - 레슨 ID 재사용·변경.
-- Google Slides에서 직접 내용만 고치고 `slides.md`에 반영하지 않기.
+- 슬라이드에서 바꾼 내용을 `script.md`에 반영하지 않기.
 - 대본에 없는 내용을 슬라이드에서 새로 만들기, 또는 대본을 고치지 않고 슬라이드만 고치기.

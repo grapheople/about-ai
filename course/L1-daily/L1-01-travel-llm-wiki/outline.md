@@ -2,11 +2,11 @@
 lesson: L1-01
 title: Claude와 Obsidian으로 "기억하는 여행 계획" 만들기 — LLM 위키 입문
 level: L1
-status: slides   # idea | outline | script | slides | final | recorded | published
-target_minutes: 24
+status: script   # idea | outline | script | slides | final | recorded | published
+target_minutes: 25
 prerequisites: []
-gslides_url: 
-updated: 2026-10-20
+slides_url: 
+updated: 2026-10-22
 ---
 
 # L1-01 Claude와 Obsidian으로 "기억하는 여행 계획" 만들기
@@ -48,21 +48,23 @@ updated: 2026-10-20
 ## 흐름
 | # | 섹션 | 핵심 메시지 | 근거 | 예상 분 |
 |---|---|---|---|---|
-| 1 | 훅 | 완성된 pathfinder 위키(그래프 뷰) + "현지에서 한 문장 → 일정·식당·요약이 같이 바뀌는" 장면을 먼저 보여 준다 | [[practices/travel-llm-wiki]] | 0.5 |
-| 2 | 강사 이야기: 요즘 세상 | 현업에서 AI로 커머스 플랫폼을 개발하는 개발자로서 느끼는 요즘 세상. 일하는 방식이 어떻게 바뀌었는지 → "그래서 개발자가 아니어도 지금 시작해야 한다"로 이 영상과 연결 | [[practices/ai-native-dev-team]] (강사 본인 경험·의견) | 2 |
-| 3 | 오늘 할 것 · 준비물 | 결과물 예고, 필요한 것: Mac · Claude 유료 플랜 · 30분 | [[sources/claude-pricing]] | 1 |
-| 4 | LLM 위키란 | 채팅/RAG는 매번 처음부터 찾는다 vs 위키는 정리된 지식이 쌓인다. 사람은 질문·방향, AI는 정리·연결 | [[sources/karpathy-llm-wiki]], [[concepts/llm-wiki]] | 3 |
+| 2 | 강사 소개: AI 코딩 변천사 | 2014 대형 포털 신입 → 커머스 플랫폼 → 2021 건강 플랫폼 스타트업 → 현재 대기업 산하 헬스케어 플랫폼 회사(커머스 플랫폼 개발) (12년차 서버 개발자). 2022 Copilot(함수 몇 줄) → 2023 GPT-4(보조, 위임 못 함) → 2025 Claude Code(판이 바뀜, 코드 직접 안 짬) → 스킬·플러그인, 프롬프트→컨텍스트→하네스→루프 엔지니어링 | [[sources/instructor-career-story]], [[syntheses/ai-coding-timeline]], [[concepts/ai-engineering-paradigms]] | 3.5 |
+| 3 | 변하지 않는 가치 → 카파시 | 이렇게 빨리 바뀌는데 변하지 않는 가치는? → 내가 쌓은 지식과 맥락 → 카파시(OpenAI 공동 창업자, 2026-05 Anthropic 합류)의 LLM 위키 | [[sources/instructor-career-story]], [[sources/karpathy-llm-wiki]] | 1 |
+| 4 | LLM 위키란 | 채팅/RAG는 매번 처음부터 찾는다 vs 위키는 정리된 지식이 쌓인다. 사람은 질문·방향, AI는 정리·연결 | [[sources/karpathy-llm-wiki]], [[concepts/llm-wiki]] | 2.5 |
+| 4b | 오늘 할 것 · 준비물 | 결과물 예고, 필요한 것: Mac · Claude 유료 플랜 · 30분 | [[sources/claude-pricing]] | 1 |
 | 5 | 설치 ① Obsidian | 다운로드 → 새 볼트 만들기 ("travel-wiki") | [[tools/obsidian]] | 1.5 |
 | 6 | 설치 ② Claude Code | 생애 첫 터미널: 여는 법 → 명령 한 줄 붙여넣기 → `claude` 실행 → 브라우저 로그인. "무서워 보여도 여기가 유일한 터미널 구간" | [[tools/claude-code]] | 3 |
 | 7 | 설치 ③ Claudian | 설정 → 커뮤니티 플러그인 → "Claudian" 검색·설치·활성화 → 사이드바에 Claude 창 | [[tools/claudian]] | 1.5 |
 | 8 | 위키 규칙 함께 만들기 | gist 링크 + "이걸로 내 여행 위키를 만들어 줘" → Claude가 질문하며 CLAUDE.md·폴더·내 여행 취향 프로필 생성 | [[concepts/llm-wiki]] | 3 |
 | 9 | 자료 넣기 (Ingest) | 도쿄 여행 자료 1~2개 → 위키 페이지 생성·연결 → 그래프 뷰에서 점이 늘어나는 장면 | [[concepts/llm-wiki]] | 2.5 |
 | 10 | 계획 요청 | 첫 요청 문장 입력 → 위키를 근거로 일정 파일 생성. 아이 동반 조건이 일정에 반영되는 것 짚기 | [[practices/travel-llm-wiki]] | 2 |
+| 1 | 하이라이트 도입 | 완성된 pathfinder 위키(그래프 뷰) + "현지에서 한 문장 → 일정·식당·요약이 같이 바뀌는" 장면을 클라이맥스 직전에 보여 준다 | [[practices/travel-llm-wiki]] | 0.5 |
 | 11 | 클라이맥스: 현지 변경 | 강사 실화 한 줄 소개(6/4 날이 좋아 크루즈로) → 시연 볼트에서 재현: "여행 둘째 날인데 날이 좋아서 실내 대신 수상버스 타고 싶어" → 일정·식당·요약이 함께 바뀜. 채팅이었다면 처음부터 다시 설명해야 했다는 대비 | [[practices/travel-llm-wiki]] | 2.5 |
 | 12 | 완성본 | pathfinder: 쓸수록 이렇게 자란다 — 그래프 뷰, 현지용 한 화면 요약(quick-reference), 두 번째 여행(제천)이 같은 위키에 쌓인 모습 | [[sources/pathfinder-case]] | 1 |
+| 12b | 회사에서도 같은 방식 | AI가 기획·QA·디자인까지, 20명 몫을 5명이, 바이블 같은 기획서 = 오늘 만든 위키와 같은 방식 → "개발자만의 이야기가 아니다" | [[practices/ai-native-dev-team]] | 1 |
 | 13 | 요약 · 다음 영상 · 댓글 질문 | 3줄 요약 → 다음 영상 예고 → "여러분은 어떤 위키를 만들고 싶나요?" 댓글 유도 | — | 0.5 |
 
-합계 약 24분. 8~11번은 Claude 응답 대기 시간을 편집으로 빨리감기 한다.
+합계 약 25분 (2026-10-22 도입부 재구성으로 늘어남). 8~11번은 Claude 응답 대기 시간을 편집으로 빨리감기 한다.
 
 ## 제작 메모
 - **개인정보**: pathfinder는 그래프 뷰 + log·일정표 일부까지 보여 준다. 임신 주수 등 가족 세부 정보는 **촬영용 사본 볼트**에서 수정한 뒤 녹화한다 (원본 pathfinder는 건드리지 않음).
@@ -70,7 +72,10 @@ updated: 2026-10-20
 - **재현 가능성**: 7~10번은 Claude 응답이 매번 다르다. 촬영 전 리허설 볼트로 한 번 돌려 보고, 실제 촬영본을 쓴다.
 - **클라이맥스 재현**: 시연 볼트는 여행 전 상태이므로 11번은 "여행 둘째 날이라고 가정하고" 요청한다.
 - **Windows 안내(설명란)**: 공식 설치 문서 링크, PowerShell 설치 명령, Claudian에서 Claude Code 경로 지정, `ANTHROPIC_API_KEY` 환경변수로 인한 `authentication_failed` 대처.
-- **강사 이야기 구간 (2번)**: 내용은 강사 본인의 생각이므로 대본 단계에서 강사 인터뷰로 채운다. Claude가 의견을 지어내지 않는다.
+- **도입부 재구성 (2026-10-22, 강사 요청)**: 강사 소개를 경력·AI 코딩 변천사로 확장하고 "변하지 않는 가치 → 카파시 → LLM 위키"로 개념 구간에 잇는다.
+  강사 소개(2·3번)를 맨 앞에 두고 표지는 카파시 소개 뒤로, 여행 장면(1번)은 클라이맥스(11번) 바로 앞으로 옮겼다 (강사 결정). 첫 30초의 "이 영상을 보면" 훅은 현재 없다.
+  기존 "AI가 기획·QA·디자인까지", "20명 → 5명" 블록은 영상 맨 끝(요약 직전)으로 옮겼다. 근거: [[sources/instructor-career-story]].
+- **강사 이야기 구간 (2번, 이전 버전 메모)**: 내용은 강사 본인의 생각이므로 대본 단계에서 강사 인터뷰로 채운다. Claude가 의견을 지어내지 않는다.
   회사·사내 시스템 등 공개하면 안 되는 내용은 일반화해서 말한다. 업계 수치·통계를 인용하면 위키 출처를 단다.
   - 강사 재료 (raw/2026-10-21-instructor-interview-ai-dev-reality.md):
     ① 코드를 한 줄도 직접 짜지 않는다 — 개발은 전부 AI가 한다.

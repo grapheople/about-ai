@@ -5,7 +5,7 @@ level: L1
 status: outline   # idea | outline | script | slides | final | recorded | published
 target_minutes: 15
 prerequisites: []
-gslides_url: 
+slides_url: 
 updated: YYYY-MM-DD
 ---
 

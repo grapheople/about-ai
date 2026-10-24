@@ -1,6 +1,6 @@
 ---
 type: overview
-updated: 2026-10-21
+updated: 2026-10-22
 ---
 
 # Overview
@@ -10,9 +10,9 @@ updated: 2026-10-21
 
 ## 레벨별 지식 지도
 - **L1 일상**: [[concepts/llm-wiki]]를 [[practices/travel-llm-wiki]]로 체험. 도구 [[tools/obsidian]] + [[tools/claudian]] + [[tools/claude-code]].
-  동기 부여로 [[practices/ai-native-dev-team]] (강사 경험).
+  동기 부여로 [[practices/ai-native-dev-team]] (강사 경험)와 [[syntheses/ai-coding-timeline]] (AI 코딩 변천사).
 - **L2 업무**: LLM 위키를 팀 지식 베이스로 확장 (L2-05) — 자료 필요.
-- **L3 개발자**: [[tools/claude-code]] 설치·플랜 정보 재사용 가능.
+- **L3 개발자**: [[tools/claude-code]] 설치·플랜·생태계 정보, [[concepts/ai-engineering-paradigms]] 재사용 가능.
 - **L4 AI 앱**: [[concepts/rag]] vs [[concepts/llm-wiki]] 비교의 씨앗만 있음.
 - **L5 엔터프라이즈**: [[practices/ai-native-dev-team]]이 조직 변화 사례 후보.
 

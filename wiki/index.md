@@ -1,6 +1,6 @@
 ---
 type: index
-updated: 2026-10-21
+updated: 2026-10-23
 ---
 
 # Wiki Index
@@ -19,10 +19,14 @@ updated: 2026-10-21
 - [[sources/obsidian-install-license]] — Obsidian macOS 설치, 무료 라이선스 (L1)
 - [[sources/pathfinder-case]] — 강사의 실제 여행 LLM 위키, 6/4 현지 크루즈 변경 사례 (L1, L2)
 - [[sources/instructor-interview-ai-dev-reality]] — 강사 인터뷰: 5명이 20명 몫, AI가 쓴 바이블 기획서 (L1, L3, L5)
+- [[sources/instructor-career-story]] — 강사 인터뷰: 12년차 서버 개발자의 AI 코딩 체험 변천사 (L1, L3)
+- [[sources/ai-coding-timeline-facts]] — Copilot·GPT-4·Claude Code 출시 시점, ○○ 엔지니어링 용어, Karpathy Anthropic 합류 (L1, L3, L4)
+- [[sources/graph-eval-engineering]] — 그래프 엔지니어링(멀티 에이전트 조율)·이밸 엔지니어링(자동 평가) 정의 (L1, L4, L5)
 
 ## Concepts
 - [[concepts/llm-wiki]] — LLM이 쓰고 고치는, 지식이 쌓이는 위키 (L1, L2, L4)
 - [[concepts/rag]] — 질문마다 원문 조각을 다시 찾는 방식과 그 한계 (L1, L4)
+- [[concepts/ai-engineering-paradigms]] — 프롬프트 → 컨텍스트 → 하네스 → 루프 → 그래프 엔지니어링 + 이밸 (L1, L3, L4)
 
 ## Tools
 - [[tools/claude-code]] — 내 폴더에서 일하는 Claude 에이전트: 설치·플랜·초보 조작 (L1, L3, L4)
@@ -34,4 +38,4 @@ updated: 2026-10-21
 - [[practices/ai-native-dev-team]] — AI가 기획·개발·QA·디자인까지 하는 팀 (강사 경험) (L1, L3, L5)
 
 ## Syntheses
-_(아직 없음)_
+- [[syntheses/ai-coding-timeline]] — AI 코딩 도구 출시 시점과 강사 체험을 나란히 놓은 타임라인 (L1, L3)

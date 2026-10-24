@@ -14,6 +14,9 @@ tags: [llm-wiki, knowledge-base, rag]
 LLM이 원본 자료를 읽어 **지속적으로 유지되는 마크다운 위키**를 직접 쓰고 고치게 하는 개인 지식 베이스 패턴.
 질문할 때마다 원문에서 다시 찾는 RAG와 달리, 지식이 한 번 정리되어 **계속 쌓인다**.
 
+## 저자
+- Andrej Karpathy — OpenAI 공동 창업자, Tesla AI 리드 출신. 2026-05-19 Anthropic 사전학습 팀 합류 발표 (as of 2026-10, [[sources/ai-coding-timeline-facts]]).
+
 ## 핵심 내용
 - 3계층: 원본 소스(불변) / 위키(LLM이 소유·작성) / 스키마(CLAUDE.md 같은 규칙 문서).
 - 3가지 작업: Ingest(자료 넣기 → 10~15개 페이지 갱신), Query(답하고 좋은 답은 위키에 되돌려 저장), Lint(모순·고아 페이지·낡은 주장 점검).
